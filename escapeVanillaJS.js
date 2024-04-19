@@ -31,19 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
         loader.style.margin = '0em auto';
         loader.style.borderRadius = '50%';
         loader.style.borderTopColor = 'transparent';
-       
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes loading {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-        `;
-        document.head.appendChild(style);
 
         roomThreeResult.appendChild(loader);
         try {
@@ -79,3 +66,15 @@ async function navigateLabyrinth(directions) {
     return "Congratulations! You've mastered the essentials of Vanilla JavaScript. Welcome to the world of React, where you'll build powerful and dynamic web applications. Let's dive in!";
 }
 
+const style = document.createElement('style');
+        style.textContent = `
+            @keyframes loading {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
