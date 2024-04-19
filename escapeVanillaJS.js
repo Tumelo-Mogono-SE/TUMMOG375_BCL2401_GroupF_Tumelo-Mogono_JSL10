@@ -21,14 +21,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 🪲 Bug: Asynchronous function ?
     document.getElementById("solveRoom3").addEventListener("click", async () => {
+        const roomThreeResult = document.getElementById("room3Result");
+        roomThreeResult.textContent = " ";
+        const loader = document.createElement('div');
+        loader.style.width = '1em';
+        loader.style.height = '1em';
+        loader.style.border = '0.2em solid #62666e';
+        loader.style.animation = 'loading 0.5s linear infinite';
+        loader.style.margin = '0em auto';
+        loader.style.borderRadius = '50%';
+        loader.style.borderTopColor = 'transparent';
+       
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes loading {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        roomThreeResult.appendChild(loader);
         try {
             const response = await fetch('directions.json'); 
             const directions = await response.json();
             const message = await navigateLabyrinth(directions);
             // 🪲 Bug: Incorrect method
-            document.getElementById("room3Result").textContent = message;
+            roomThreeResult.textContent = message;
         } catch {
-            document.getElementById("room3Result").textContent = "Error: No directions found!";
+            roomThreeResult.textContent = "Error: No directions found!";
             console.log("Error: No directions found!")
         };
     });
