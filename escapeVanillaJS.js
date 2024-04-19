@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Error: No directions found!")
         };
     });
+
+    keyframes();
 });
 
 function findMostRecentBook(books) {
@@ -66,7 +68,9 @@ async function navigateLabyrinth(directions) {
     return "Congratulations! You've mastered the essentials of Vanilla JavaScript. Welcome to the world of React, where you'll build powerful and dynamic web applications. Let's dive in!";
 }
 
-const style = document.createElement('style');
+
+function keyframes () {
+    const style = document.createElement('style');
         style.textContent = `
             @keyframes loading {
                 0% {
@@ -78,3 +82,5 @@ const style = document.createElement('style');
             }
         `;
         document.head.appendChild(style);
+}
+
