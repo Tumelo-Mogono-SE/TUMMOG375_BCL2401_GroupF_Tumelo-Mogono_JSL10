@@ -1,46 +1,19 @@
 # [JSL10] Submission: Escaping Vanilla JS: Abstraction Challenge
-
-You will:
-1. Use the provided Starter Code Repository: https://github.com/CodeSpace-Academy/Module_10_StudentNo_Classcode_Group_Name-Surname_JSL10
-2. Code your solution.
-3. Commit changes to your GitHub repository.
-4. Submit the GitHub Repository Link to the LMS [JSL10] Submission Project Tab.
-
-The Escape Vanilla JS Challenge is an interactive web-based project focusing on debugging skills, problem-solving, and the concept of abstraction. You will navigate through three themed "rooms," each presenting a unique challenge that requires them to debug and correct given JavaScript code to proceed. This adventure is themed around escaping the confines of Vanilla JavaScript to advance towards learning React.
+# Project Objective
+The Escapeing Vanilla JS Challenge is an interactive web-based project that focuses on debugging skills, problem-solving and the concept of abstration. We had to navigate through three themed "rooms", each presenting a unique challenge that requires us to dedug and correct the given JavaScript code to proceed. This adventure is themed around escaping the confines of Vanilla JavaScript to advance towards learning React.
 
 ![alt text](<[JSL10 Solution].gif>)
 
-## What You Need to Do:
+# Project Process
+* For this project, after accessing the starter code from Github repository, I first read through the steps provided in the instruction.md file and the initial readme.md file.
+* I started by first adjusting the id's provided in the first event listner for Room 1 for the two elements fetched from the DOM, I then adjusted the logic for the function called inside the room 1 call back function for accessing the correct book to be passed to the elements content. I adjusted the logic by changing the operator from less than to greater than inside the ternary operators inside the call back function of the reduce method.
+* For the second room, I made adjustments to the first set created by adding the 'async' in order to acheive the objectives of the concept being tested which is intersections. I then changed the second argument inside the findIntersection function, since we are testing the two sets created above. I then made changes to the new set created inside the findIntersection function, by adding a filter method which will ensure that the new set will only contain elements which setB has by iterating through setA.
+* For the third room, I adjusted the code by adding the async to the call back function for the event listener and then applied the try catch method, inside the try method I added the await operator for the fetch, the conversion of the fetched data to JSON format and the function called which iterates through the data. I then added inside the catch method a string message which is passed to the fetched element from the DOM and also console logged the string message. I then added the await operator to the new Promise.
+* I then went an extra mile by creating a div element which I styled to be a loader which is then appended inside the result bar for room three when the room 3 button is pressed, I also before adding the loader I cleared the content of room 3 results element. I then created another element which is a style element which I added to it's content the keyframe's for the animation of the loader and appended inside the head of the document to be accessible throughout the project.
+* I then changed my code by assigning the element fetched inside room 3 to a variable which I can use throughout my code.
 
-1. Clone the provided Starter Code Repository to your local development environment (e.g., VSCode): https://github.com/CodeSpace-Academy/Module_10_StudentNo_Classcode_Group_Name-Surname_JSL10
-2. Open the cloned project in your code editor.
-3. Code your solution for each of the challenges as per the provided instructions.
-4. Commit your changes to your local Git repository with meaningful commit messages.
-5. Push your local Git repository to your GitHub account.
-6. Verify that the changes have been successfully pushed to your GitHub repository.
+# Challenges
+None, I just had a confusion as to which method to use to test for the intersection of sets. As there were two methods I could use, one being using a for loop with an if statement inside it and the second method being the filter methods which eventually being the one I choose due to the simplicity of it.
 
-#### Debugging Tasks
-
-1. **Correct the ID used in the event listener for Room 1.**
-2. **Use the correct element ID when displaying results for Room 1.**
-3. **Add the missing 'async' keyword to the JS concepts set.**
-4. **Correct the function call to find the intersection of `jsConcepts` and `reactConcepts` for Room 2.**
-5. **Ensure asynchronous operations are handled correctly in Room 3, particularly by adding `await` before the promise in `navigateLabyrinth`.**
-6. **Adjust the `findMostRecentBook` function to correctly compare dates and find the most recent book.**
-7. **Fix the `findIntersection` function to correctly determine the intersection of two sets.**
-8. **Add the `await` keyword before `new Promise` in `navigateLabyrinth` to ensure the simulation of asynchronous operations works as intended.**
-
-## What You Need to Include:
-
-1. Ensure that your code includes the necessary modifications to meet the challenge requirements.
-2. Your GitHub repository should contain the updated code files.
-
-## How We'll Assess Your Work:
-
-1. We will review your GitHub repository to ensure that it contains the updated code files.
-2. We will assess the modifications made to the code to verify that they effectively meet the challenge requirements.
-3. We will consider the commit history and meaningful commit messages to evaluate your coding process.
-
-
-
-
+# Feedbacks
+Overall a good project, which involved different topics we have learned throughout JSL course. Enjoyed working on the additional feature, based on the research I had to do I learned other methods of adding CSS style to JavaScript, it is just unfortunate the other method I wanted to use didn't work.
